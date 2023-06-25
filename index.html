@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Список аніме</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+      function showSeasons(anime) {
+        var seasons = anime.querySelectorAll(".season");
+        var table = document.createElement("table");
+        table.classList.add("seasons-table");
+      
+        for (var i = 0; i < seasons.length; i++) {
+          var season = seasons[i];
+          var row = document.createElement("tr");
+      
+          var seasonNumber = document.createElement("td");
+          seasonNumber.textContent = season.dataset.seasonNumber;
+      
+          var episodes = document.createElement("td");
+          episodes.textContent = season.dataset.episodes;
+      
+          row.appendChild(seasonNumber);
+          row.appendChild(episodes);
+      
+          table.appendChild(row);
+        }
+      
+        anime.appendChild(table);
+      }
+      
+      document.querySelectorAll(".anime").forEach(function(anime) {
+        anime.addEventListener("click", function() {
+          showSeasons(anime);
+        });
+      });
+      </script>
+  </head>
+  <body>
+    <h1 class="table-header">Аніме в списках користувача Yannellen</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Всі</th>
+          <th>Переглянуто</th>
+          <th>Заплановано</th>
+          <th>Дивлюся</th>
+          <th>Кинуто</th>
+          <th>Відкладено</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>66</td>
+          <td>39</td>
+          <td>29</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Назва</th>
+          <th>Стан</th>
+          <th>Оцінка</th>
+          <th>Озвучка</th>
+          <th>Епізодів сумарно</th>
+          <th>Сезони</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Атака Титанів</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>89</td>
+          <td>7/7</td>
+        </tr>
+        <tr>
+          <td>Баракамон</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Баскетбол Куроко</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>25</td>
+          <td>0/3</td>
+        </tr>
+        <tr>
+          <td>Бездарна Нана</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>Студійна Банда</td>
+          <td>13</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Безхатній Бог</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>Reanimedia</td>
+          <td>25</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Ван Піс</td>
+          <td>Дивлюся</td>
+          <td>Н/Д</td>
+          <td>AniMedia</td>
+          <td>1056/?</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Ванпанчмен</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>JAM CLUB</td>
+          <td>24</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Видатні звірі</td>
+          <td>Відкладено/Заплановано</td>
+          <td>Н/Д</td>
+          <td>AniLibria</td>
+          <td>24</td>
+          <td>0/2</td>
+        </tr>
+        <tr>
+          <td>Волейбол!! До вершини</td>
+          <td>Переглянуто/Кинуто</td>
+          <td>8/10</td>
+          <td>Студійна Банда</td>
+          <td>25</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Відтворювачі</td>
+          <td>Відкладено</td>
+          <td>Н/Д</td>
+          <td>Студійна Банда</td>
+          <td>22</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>До лісу, де мерехтять світлячки</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniDUB</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Доктор Стоун</td>
+          <td>Переглянуто</td>
+          <td>9/10, 10/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>46</td>
+          <td>2/3</td>
+        </tr>
+        <tr>
+          <td>Дівчачий Табір</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>37</td>
+          <td>0/3</td>
+        </tr>
+        <tr>
+          <td>Дівчина напрокат</td>
+          <td>Переглянуто</td>
+          <td>10/10, 7/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>24</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Дівчинка, що бачить</td>
+          <td>Переглянуто</td>
+          <td>8/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>12/12</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Заради своєї дочки я зможу перемогти навіть короля демонів</td>
+          <td>Переглянуто</td>
+          <td>8/10</td>
+          <td>AniLibria</td>
+          <td>12</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Зошит Смерті</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>2х2</td>
+          <td>37</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Казкова красуня: Забери мене на Місяць</td>
+          <td>Переглянуто/Заплановано</td>
+          <td>10/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>Н/Д</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Клас убивць</td>
+          <td>Переглянуто</td>
+          <td>9/10, 10/10</td>
+          <td>AniDUB</td>
+          <td>47</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Клинок, який знищує демонів</td>
+          <td>Переглянуто/Заплановано</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>45/?</td>
+          <td>4/5</td>
+        </tr>
+        <tr>
+          <td>Коли я переродився слизом</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniLibria</td>
+          <td>61</td>
+          <td>5/5</td>
+        </tr>
+        <tr>
+          <td>Король шаманів</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>52</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Крізь сльози я прикидаюсь кішкою</td>
+          <td>Переглянуто</td>
+          <td>8/10</td>
+          <td>Дубляж</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Людина-бензопила</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Flarrow Films</td>
+          <td>12</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Лінія Диявола</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Майстерня котика</td>
+          <td>Переглянуто</td>
+          <td>8/10</td>
+          <td>Н/Д</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Мисливець х Мисливець</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>210</td>
+          <td>0/2</td>
+        </tr>
+        <tr>
+          <td>Місто, де немає лиш мене</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Надміру турботливе хвостате Божество</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniLibria</td>
+          <td>12</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Наруто</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Н/Д</td>
+          <td>720</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Не знущайся з мене, Наґаторо!</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniLibria</td>
+          <td>24</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Негідники не мріють про шляхетних кроличок</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>14</td>
+          <td>2/2</td>
+        </tr>
+        <tr>
+          <td>Нульовий Едем</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>0/2</td>
+        </tr>
+        <tr>
+          <td>Обіцяний Неверленд</td>
+          <td>Переглянуто/Кинуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>23</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Однокласник</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Останній серафим</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>24</td>
+          <td>0/2</td>
+        </tr>
+        <tr>
+          <td>П'ять наречених</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniLibria</td>
+          <td>25</td>
+          <td>3/3</td>
+        </tr>
+        <tr>
+          <td>Панда велика та маленька</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Паразит</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>AniLibria</td>
+          <td>24</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Пекельний рай</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Повтор цілителя</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Повість про кінець світу</td>
+          <td>Переглянуто/Дивлюся</td>
+          <td>9/10</td>
+          <td>AniLibria</td>
+          <td>27</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Подорож Елейни</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Реінкарнація безробітного: Історія про пригоди в іншому світі</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>34</td>
+          <td>3/3</td>
+        </tr>
+        <tr>
+          <td>Робота клітин</td>
+          <td>Переглянуто</td>
+          <td>7/10, 8/10, 10/10</td>
+          <td>Студійна Банда</td>
+          <td>34</td>
+          <td>3/3</td>
+        </tr>
+        <tr>
+          <td>Сворд Арт Онлайн</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Свято ляльок</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Скитальці</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Сім смертних гріхів</td>
+          <td>Переглянуто/Кинуто</td>
+          <td>10/10, 1/10</td>
+          <td>AniLibria</td>
+          <td>98</td>
+          <td>5/6</td>
+        </tr>
+        <tr>
+          <td>Так, я павук, і що?</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>24</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Темний дворецький</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Токійський людожер</td>
+          <td>Переглянуто</td>
+          <td>9/10, 7/10, 7/10, 8/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>48</td>
+          <td>4/4</td>
+        </tr>
+        <tr>
+          <td>Убивця Акаме!</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>AniLibria</td>
+          <td>24</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Узакі хоче гуляти!</td>
+          <td>Переглянуто/Заплановано</td>
+          <td>8/10</td>
+          <td>Студійна Банда</td>
+          <td>24</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Форма голосу</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Хвіст Феї</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>AniDUB</td>
+          <td>279</td>
+          <td>4/4</td>
+        </tr>
+        <tr>
+          <td>Хорімія</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>13</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Цей прекрасний світ, благословенний Богом!</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>21</td>
+          <td>3/3</td>
+        </tr>
+        <tr>
+          <td>Ця фарфорова лялечка закохалася</td>
+          <td>Переглянуто</td>
+          <td>10/10</td>
+          <td>Студійна Банда</td>
+          <td>12</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Чорна конюшина</td>
+          <td>Переглянуто</td>
+          <td>9/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>170</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Шалений Азарт</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>0/2</td>
+        </tr>
+        <tr>
+          <td>Школа-в'язниця</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>12</td>
+          <td>Н/Д</td>
+        </tr>
+        <tr>
+          <td>Щоденник майбутнього</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>26</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>Я стою на мільйоні трупів</td>
+          <td>Переглянуто/Заплановано</td>
+          <td>7/10</td>
+          <td>Професійний багатоголосий</td>
+          <td>24</td>
+          <td>1/2</td>
+        </tr>
+        <tr>
+          <td>Янгольські ритми!</td>
+          <td>Переглянуто</td>
+          <td>7/10</td>
+          <td>AniLibria</td>
+          <td>13</td>
+          <td>1/1</td>
+        </tr>
+        <tr>
+          <td>Імперія мерців</td>
+          <td>Заплановано</td>
+          <td>Н/Д</td>
+          <td>Н/Д</td>
+          <td>1</td>
+          <td>Н/Д</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
